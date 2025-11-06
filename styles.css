@@ -1,0 +1,794 @@
+/* General */
+body {
+  margin-top: 70px; /* for fixed navbar */
+}
+
+/* --- NAVBAR BASE --- */
+.navbar {
+  background-color: #735CDD !important; /* morado inicial */
+  transition: all 0.3s ease;
+}
+
+/* --- NAVBAR SCROLLED --- */
+.navbar.scrolled {
+  background-color: #001B2E !important; /* azul oscuro o negro */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- TÍTULO DEL SITIO --- */
+.navbar .navbar-brand {
+  color: #ffffff !important; /* blanco cuando está arriba */
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+/* Cuando se hace scroll, puedes mantenerlo blanco o cambiarlo */
+.navbar.scrolled .navbar-brand {
+  color: #ffc107 !important; /* dorado al hacer scroll (opcional) */
+}
+
+/* --- LINKS (Home, Destinations, About Us) --- */
+.navbar .nav-link {
+  position: relative;
+  color: #000 !important; /* color inicial sobre fondo morado */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #ffffff !important; /* blanco al pasar hover */
+}
+
+/* Línea animada blanca al hover */
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* --- LINKS cuando se hace scroll --- */
+.navbar.scrolled .nav-link {
+  color: #ffc107 !important; /* dorado al hacer scroll */
+}
+
+.navbar.scrolled .nav-link:hover {
+  color: #ffffff !important; /* blanco al hover */
+}
+
+.navbar.scrolled .nav-link::after {
+  background-color: #ffffff;
+}
+
+/* --- BOTÓN LOG IN --- */
+.btn-login {
+  background-color: #F2BB05;  /* morado inicial */
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: #fff;     /* blanco al hover */
+  color: #735CDD;
+}
+
+/* Cuando se hace scroll: invertimos colores */
+.navbar.scrolled .btn-login {
+  background-color: #fff;
+  color: #735CDD;
+}
+
+.navbar.scrolled .btn-login:hover {
+  background-color: #735CDD;
+  color: #fff;
+}
+
+/* --- BOTÓN REGISTER --- */
+.btn-register {
+  background-color: #fff;     /* blanco inicial */
+  color: #735CDD;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-register:hover {
+  background-color: #F2BB05;  /* morado al hover */
+  color: #fff;
+}
+
+/* Cuando se hace scroll: invertimos colores */
+.navbar.scrolled .btn-register {
+  background-color: #735CDD;
+  color: #fff;
+}
+
+.navbar.scrolled .btn-register:hover {
+  background-color: #fff;
+  color: #735CDD;
+}
+
+
+/* --- HERO GENERAL --- */
+#heroCarousel {
+  position: relative;
+  margin-top: 70px;
+  overflow: hidden;
+}
+
+.hero-slide {
+  height: 65vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Indicadores centrados en todas las pantallas */
+.custom-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0;
+  margin: 0;
+}
+
+.custom-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.custom-indicators .active {
+  background-color: #ffc107;
+  transform: scale(1.2);
+}
+
+/* Ajuste fino en pantallas pequeñas */
+@media (max-width: 768px) {
+  .custom-indicators {
+    bottom: 15px;
+    gap: 0.4rem;
+  }
+}
+
+
+
+/* --- PANEL LATERAL IZQUIERDO --- */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 30%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2rem;
+}
+
+.destination-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.destination-item {
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.destination-item span {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.destination-item h5 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.destination-item.active h5 {
+  color: #ffc107;
+}
+
+.destination-item:hover {
+  transform: scale(1.05);
+  color: #fff;
+}
+
+/* --- TEXTO PRINCIPAL DERECHA --- */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  transform: translateY(-50%);
+  color: #fff;
+  text-align: right;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.hero-text .btn {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+  .hero-overlay {
+    width: 45%;
+    padding-left: 1.5rem;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-overlay {
+    display: none; /* ocultar panel lateral en móvil */
+  }
+
+  .hero-text {
+    right: 50%;
+    transform: translate(50%, -50%);
+    text-align: center;
+  }
+}
+
+
+.search-section .form-control,
+.search-section .form-select {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-section .form-control:focus,
+.search-section .form-select:focus {
+  border-color: #735CDD;
+  box-shadow: 0 0 0 0.2rem rgba(115, 92, 221, 0.25);
+}
+
+.search-section .btn-dark {
+  background-color: #735CDD;
+  border-color: #735CDD;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.search-section .btn-dark:hover {
+  background-color: #5437e8;
+  border-color: #5a48b1;
+}
+
+/* --- Guest Selector --- */
+.guest-selector {
+  cursor: pointer;
+  position: relative;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.guest-selector:focus {
+  border-color: #735CDD;
+  box-shadow: 0 0 0 0.2rem rgba(115, 92, 221, 0.25);
+}
+
+/* Dropdown de huéspedes */
+.guest-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: none;
+  z-index: 10;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.guest-dropdown.show {
+  display: block;
+  animation: fadeIn 0.2s ease;
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Botones +/- */
+.guest-btn {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border-radius: 50%;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.guest-btn:focus {
+  box-shadow: none;
+}
+
+
+/* Cards */
+.card img {
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Buttons */
+.btn-dark {
+  border-radius: 10px;
+}
+
+.btn-outline-dark {
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    text-align: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
+.search-section .form-control {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-section .form-control:focus {
+  border-color: #735CDD;
+  box-shadow: 0 0 0 0.2rem rgba(115, 92, 221, 0.25);
+}
+
+.search-section .btn-dark {
+  background-color: #735CDD;
+  border-color: #735CDD;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.search-section .btn-dark:hover {
+  background-color: #F2BB05;
+  border-color: #F2BB05;
+}
+
+/* --- BOTONES OSCUROS PERSONALIZADOS (Hero y Contact Us) --- */
+.btn-dark {
+  background-color: #001B2E;      /* color inicial: negro */
+  border: 2px solid #001B2E;
+  color: #ffffff;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Hover (al pasar el mouse) */
+.btn-dark:hover {
+  background-color: #F2BB05;      /* morado al hover */
+  border-color: #F2BB05;
+  color: #ffffff;                 /* texto blanco */
+  transform: scale(1.05);         /* efecto sutil de crecimiento */
+}
+
+/* --- DESTINATION CARDS --- */
+.destination-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.destination-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.destination-card img {
+  transition: all 0.5s ease;
+}
+
+/* Cambiar imagen y brillo */
+.destination-card:hover img {
+  filter: brightness(0.9);
+}
+
+/* Animación al mostrar "Ver más" */
+.fade-in {
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- BOTÓN "VER MÁS" --- */
+#showMoreDestinations {
+  color: #735CDD;              /* tu morado principal */
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+/* Al pasar el mouse */
+#showMoreDestinations:hover {
+  color: #FFC107;              /* dorado al hover */
+}
+
+/* --- SPOOKY DEALS --- */
+.spooky-section {
+  background: linear-gradient(180deg, #1a1a1d 0%, #0d0d0f 90%);
+  padding: 80px 0;
+}
+
+/* Título centrado y visible */
+.spooky-section h2 {
+  color: #ffffff !important;
+  position: relative;
+  display: inline-block;
+}
+
+.spooky-section h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, #735CDD, #FFC107);
+  border-radius: 2px;
+}
+
+/* Cards */
+.spooky-card {
+  height: 280px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.spooky-card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+/* Hover efecto */
+.spooky-card:hover img {
+  transform: scale(1.1);
+  filter: brightness(0.75);
+}
+
+.spooky-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 30%, rgba(0, 0, 0, 0.15) 80%);
+  opacity: 0.95;
+}
+
+/* Texto dentro */
+.spooky-overlay h4 {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  font-size: 1.5rem;
+}
+
+.spooky-overlay p {
+  font-size: 0.95rem;
+}
+
+/* Botón dentro */
+.spooky-overlay .btn-outline-light {
+  border-color: #fff;
+  color: #fff;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.spooky-overlay .btn-outline-light:hover {
+  background-color: #735CDD;
+  border-color: #735CDD;
+  color: #fff;
+}
+
+/* Hover efecto card */
+.spooky-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(115, 92, 221, 0.3);
+}
+
+/* --- Título de sección Spooky Deals --- */
+.spooky-section h2 {
+  color: #ffffff !important; /* blanco */
+}
+
+/* --- REVIEWS SECTION --- */
+.review-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(115, 92, 221, 0.2);
+}
+
+/* Imagen circular */
+.review-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #735CDD;
+  box-shadow: 0 0 10px rgba(115, 92, 221, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.review-card:hover .review-img {
+  transform: scale(1.05);
+}
+
+/* Título */
+.review-card h5 {
+  color: #001B2E;
+}
+
+/* Texto */
+.review-card p {
+  font-size: 0.95rem;
+}
+
+/* Fondo general */
+section.bg-light {
+  background: linear-gradient(180deg, #f9f9ff 0%, #f2f2fc 100%);
+}
+
+/* --- CONTACT AN AGENT (Modern) --- */
+.contact-agent {
+  color: #001B2E;
+}
+
+.contact-agent .form-control {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.contact-agent .form-control:focus {
+  border-color: #735CDD;
+  box-shadow: 0 0 0 0.2rem rgba(115, 92, 221, 0.2);
+}
+
+/* Botón */
+.contact-agent .btn-dark {
+  background-color: #001B2E;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.contact-agent .btn-dark:hover {
+  background-color: #735CDD;
+  color: #fff;
+}
+
+/* Imagen del agente */
+.agent-img-modern {
+  max-width: 400px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* --- HERO DESTINATIONS (Parallax) --- */
+.hero-destinations {
+  background: url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1') center/cover no-repeat fixed;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-destinations::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-destinations .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* --- TABS PRINCIPALES (CONTINENTES) --- */
+#countryTabs .nav-link {
+  background-color: transparent;
+  color: #735CDD; /* morado principal */
+  font-weight: 600;
+  border: 2px solid #735CDD;
+  border-radius: 50px;
+  margin: 0 8px; /* separa los botones entre sí */
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+/* Al pasar el mouse */
+#countryTabs .nav-link:hover {
+  background-color: #735CDD;
+  color: #fff;
+}
+
+/* Cuando está activo (seleccionado) */
+#countryTabs .nav-link.active {
+  background-color: #735CDD;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(115, 92, 221, 0.3);
+  transform: scale(1.05);
+}
+
+/* Para pantallas pequeñas, mejora la distribución */
+@media (max-width: 768px) {
+  #countryTabs .nav-link {
+    display: block;
+    margin: 6px 0;
+    width: 100%;
+  }
+}
+
+/* --- TABS PRINCIPALES (Continentes) --- */
+.nav-pills .nav-link {
+  border-radius: 30px;
+  padding: 0.5rem 1.5rem;
+  color: #735CDD;
+  border: 2px solid #735CDD;
+  font-weight: 600;
+  margin: 0 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link:hover {
+  background-color: #735CDD;
+  color: #fff;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #735CDD;
+  color: #fff;
+  border: 2px solid #735CDD;
+  box-shadow: 0 4px 12px rgba(115, 92, 221, 0.3);
+  transform: scale(1.05);
+}
+
+/* --- SUBTABS (Países dentro de Continentes) --- */
+.nav-underline .nav-link {
+  position: relative;
+  color: #735CDD;
+  font-weight: 500;
+  border: none;
+  background-color: transparent;
+  padding: 0.4rem 1.2rem;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover */
+.nav-underline .nav-link:hover {
+  color: #735CDD;
+  transform: scale(1.03);
+}
+
+/* Línea animada debajo */
+.nav-underline .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: #735CDD;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Hover y activo con subrayado */
+.nav-underline .nav-link:hover::after,
+.nav-underline .nav-link.active::after {
+  width: 80%;
+}
+
+/* Activo */
+.nav-underline .nav-link.active {
+  font-weight: 600;
+  color: #735CDD;
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+  .nav-pills .nav-link {
+    display: block;
+    width: 100%;
+    margin: 6px 0;
+  }
+
+  .nav-underline .nav-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 6px 0;
+  }
+}
+
+/* --- Color personalizado para las puntuaciones (badges) --- */
+.badge.bg-primary {
+  background-color: #F2BB05 !important; /* tu dorado */
+  color: #000; /* texto oscuro para contraste */
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.4em 0.6em;
+  font-size: 0.8rem;
+}
+
