@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Midnight Travels</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light px-4 py-3 fixed-top shadow-sm">
+  <a class="navbar-brand fw-bold" href="#">Midnight Travels</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav align-items-lg-center">
+      <li class="nav-item mx-2"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item mx-2"><a class="nav-link" href="destinations.html">Destinations</a></li>
+      <li class="nav-item mx-2"><a class="nav-link" href="about-contact.html">Contact</a></li>
+      <li class="nav-item mx-2">
+  <a class="btn btn-login btn-sm" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a>
+</li>
+<li class="nav-item mx-2">
+  <a class="btn btn-register btn-sm" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a>
+</li>
+    </ul>
+  </div>
+</nav>
+
+  <!-- Hero Carousel with extra block -->
+<section id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+  <div class="carousel-inner">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active" data-title="Salem" data-country="USA">
+      <div class="hero-slide" style="background-image: url('images/salem.png');"></div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item" data-title="Transylvania" data-country="Rumania">
+      <div class="hero-slide" style="background-image: url('images/transylvania.png');"></div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item" data-title="Edinburgh" data-country="Scotland">
+      <div class="hero-slide" style="background-image: url('images/edinburgh.png');"></div>
+    </div>
+  </div>
+
+  <!-- Indicators -->
+  <div class="carousel-indicators custom-indicators">
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+  <!-- Lateral block -->
+  <div class="hero-overlay">
+    <div class="destination-list">
+      <div class="destination-item active" data-index="0">
+        <span>01 USA</span>
+        <h5>Salem</h5>
+      </div>
+      <div class="destination-item" data-index="1">
+        <span>02 Rumania</span>
+        <h5>Transylvania</h5>
+      </div>
+      <div class="destination-item" data-index="2">
+        <span>03 Scotland</span>
+        <h5>Edinburgh</h5>
+      </div>
+    </div>
+  </div>
+
+  <!-- Principal text -->
+  <div class="hero-text">
+    <h1 id="heroTitle" class="fw-bold">Transylvania</h1>
+    <a href="destinations.html" class="btn btn-dark btn-sm">Book Now</a>
+  </div>
+</section>
+
+ <!-- Search Section -->
+<section class="search-section py-5 bg-white">
+  <div class="container">
+    <form class="row g-3 justify-content-center align-items-end">
+      <!-- Where From -->
+      <div class="col-6 col-md-3">
+        <label for="from" class="form-label fw-semibold">Where From?</label>
+        <select id="from" class="form-select">
+          <option selected disabled>Choose departure</option>
+          <option value="brazil">Brazil</option>
+          <option value="china">China</option>
+          <option value="czech-republic">Czech Republic</option>
+          <option value="england">England</option>
+          <option value="france">France</option>
+          <option value="germany">Germany</option>
+          <option value="india">India</option>
+          <option value="ireland">Ireland</option>
+          <option value="italy">Italy</option>
+          <option value="japan">Japan</option>
+          <option value="mexico">Mexico</option>
+          <option value="netherlands">Netherlands</option>
+          <option value="romania">Romania</option>
+          <option value="scotland">Scotland</option>
+          <option value="usa">USA</option>
+          
+          
+        </select>
+      </div>
+
+      <!-- Where To -->
+      <div class="col-6 col-md-3">
+        <label for="to" class="form-label fw-semibold">Where To?</label>
+        <select id="to" class="form-select">
+          <option selected disabled>Choose destination</option>
+          <option value="brazil">Brazil</option>
+          <option value="china">China</option>
+          <option value="czech-republic">Czech Republic</option>
+          <option value="england">England</option>
+          <option value="france">France</option>
+          <option value="germany">Germany</option>
+          <option value="india">India</option>
+          <option value="ireland">Ireland</option>
+          <option value="italy">Italy</option>
+          <option value="japan">Japan</option>
+          <option value="mexico">Mexico</option>
+          <option value="netherlands">Netherlands</option>
+          <option value="romania">Romania</option>
+          <option value="scotland">Scotland</option>
+          <option value="usa">USA</option>
+        </select>
+      </div>
+
+      <!-- Depart Date -->
+      <div class="col-6 col-md-2">
+        <label for="depart" class="form-label fw-semibold">Depart Date</label>
+        <input type="date" id="depart" class="form-control">
+      </div>
+
+      <!-- Return Date -->
+      <div class="col-6 col-md-2">
+        <label for="return" class="form-label fw-semibold">Return Date</label>
+        <input type="date" id="return" class="form-control">
+      </div>
+
+      <!-- Number of Guests (tipo Airbnb) -->
+<div class="col-6 col-md-4 position-relative">
+  <label class="form-label fw-semibold">Number of Guests</label>
+  <div class="guest-selector form-control d-flex justify-content-between align-items-center" id="guestDropdown">
+    <span id="guestSummary">2 adults, 0 children, 0 pets</span>
+    <i class="bi bi-chevron-down"></i>
+  </div>
+
+  <!-- Dropdown secret -->
+  <div class="guest-dropdown shadow-sm p-3 rounded bg-white" id="guestOptions">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <span>Adults</span>
+      <div>
+        <button type="button" class="btn btn-outline-dark btn-sm guest-btn" data-type="adults" data-action="minus">-</button>
+        <span id="adultsCount" class="mx-2">2</span>
+        <button type="button" class="btn btn-outline-dark btn-sm guest-btn" data-type="adults" data-action="plus">+</button>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <span>Children</span>
+      <div>
+        <button type="button" class="btn btn-outline-dark btn-sm guest-btn" data-type="children" data-action="minus">-</button>
+        <span id="childrenCount" class="mx-2">0</span>
+        <button type="button" class="btn btn-outline-dark btn-sm guest-btn" data-type="children" data-action="plus">+</button>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center">
+      <span>Pets</span>
+      <div>
+        <button type="button" class="btn btn-outline-dark btn-sm guest-btn" data-type="pets" data-action="minus">-</button>
+        <span id="petsCount" class="mx-2">0</span>
+        <button type="button" class="btn btn-outline-dark btn-sm guest-btn" data-type="pets" data-action="plus">+</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <!-- Number of Rooms -->
+      <div class="col-6 col-md-3">
+        <label for="rooms" class="form-label fw-semibold">Number of Rooms</label>
+        <select id="rooms" class="form-select">
+          <option selected disabled>Choose rooms</option>
+          <option value="1">1 room</option>
+          <option value="2">2 rooms</option>
+          <option value="3">3 rooms</option>
+          <option value="4">4 rooms</option>
+          <option value="5">5 rooms</option>
+        </select>
+      </div>
+
+      <!-- Search Button -->
+      <div class="col-6 col-md-3 d-grid">
+      <a href="destinations.html" class="btn btn-dark">Search</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+  <!-- Best Destinations -->
+<section class="py-5">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="fw-bold mb-0">Best Destinations</h2>
+      <button class="btn btn-link text-decoration-none fw-semibold" id="showMoreDestinations">
+        See More
+      </button>
+    </div>
+
+    <div class="row g-4" id="destinationCards">
+      <!-- Card 1 -->
+      <div class="col-sm-6 col-lg-4">
+        <div class="card destination-card shadow-sm border-0 overflow-hidden">
+          <img 
+            src="images/derry.png"
+            data-alt="images/edinburgh.png"
+            class="card-img-top"
+            alt="Derry"
+          >
+          <div class="card-body">
+            <h5 class="card-title">Derry, North Ireland</h5>
+            <p class="card-text">Step into a land where twilight never fades.
+            Every shadow hides a story waiting to be found.
+            Dare to wander — and let the night guide your journey.</p>
+            <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€350</span></p>
+            <a href="#" class="btn btn-dark btn-sm book-btn" data-destination="Derry, North Ireland">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-sm-6 col-lg-4">
+        <div class="card destination-card shadow-sm border-0 overflow-hidden">
+          <img 
+            src="images/york.png"
+            data-alt="images/salem.png"
+            class="card-img-top"
+            alt="York"
+          >
+          <div class="card-body">
+            <h5 class="card-title">York, England</h5>
+            <p class="card-text">Explore timeless cities wrapped in autumn mist.
+            Follow whispers of legends and forgotten dreams.
+            Your next midnight adventure begins here.</p>
+            <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€570</span></p>
+            <a href="#" class="btn btn-dark btn-sm book-btn" data-destination="York, England">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-sm-6 col-lg-4">
+        <div class="card destination-card shadow-sm border-0 overflow-hidden">
+          <img 
+            src="images/paris.png"
+            data-alt="images/czeck-republic.png"
+            class="card-img-top"
+            alt="Paris"
+          >
+          <div class="card-body">
+            <h5 class="card-title">Paris, France</h5>
+            <p class="card-text">Discover destinations where history and mystery intertwine.
+            From ancient castles to haunted streets, every path tells a tale.
+            Travel beyond the ordinary — the night awaits.</p>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€829</span></p>
+            <a href="#" class="btn btn-dark btn-sm book-btn" data-destination="Paris, France">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Extra destinations (secret) -->
+    <div class="row g-4 mt-3 d-none" id="extraDestinations">
+      <div class="col-sm-6 col-lg-4">
+        <div class="card destination-card shadow-sm border-0 overflow-hidden">
+          <img 
+            src="images/venice.png"
+            data-alt="images/new-orleans.png"
+            class="card-img-top"
+            alt="Venice"
+          >
+          <div class="card-body">
+            <h5 class="card-title">Venice, Italy</h5>
+            <p>Experience travel like never before.
+            Hidden gems, haunted tales, and breathtaking views.
+            Midnight Travels — where every trip feels enchanted.</p>
+            <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€950</span></p>
+            <a href="#" class="btn btn-dark btn-sm book-btn" data-destination="Venice, Italy">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4">
+        <div class="card destination-card shadow-sm border-0 overflow-hidden">
+          <img 
+            src="images/czeck-republic.png"
+            data-alt="images/york.png"
+            class="card-img-top"
+            alt="Prague"
+          >
+          <div class="card-body">
+            <h5 class="card-title">Prague, Czech Republic</h5>
+            <p>Step into a land where twilight never fades.
+            Every shadow hides a story waiting to be found.
+            Dare to wander — and let the night guide your journey.</p>
+            <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€638</span></p>
+            <a href="#" class="btn btn-dark btn-sm book-btn" data-destination="Prague, Czech Republic">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4">
+        <div class="card destination-card shadow-sm border-0 overflow-hidden">
+          <img 
+            src="images/tokyo.png"
+            data-alt="images/kioto.png"
+            class="card-img-top"
+            alt="Budapest"
+          >
+          <div class="card-body">
+            <h5 class="card-title">Tokyo, Japan</h5>
+            <p>Discover destinations where history and mystery intertwine.
+            From ancient castles to haunted streets, every path tells a tale.
+            Travel beyond the ordinary — the night awaits.</p>
+            <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€1245</span></p>
+            <a href="#" class="btn btn-dark btn-sm book-btn" data-destination="Tokyo, Japan">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Why Choose Us -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h2 class="fw-bold mb-3">Why choose us?</h2>
+          <p class="text-muted">
+          At Midnight Travels, every journey begins with a spark of wonder.
+          We dont just plan trips — we craft stories that stay with you forever.
+          Our team of passionate travelers curates each experience with heart and precision.
+          From misty castles to vibrant city lights, every destination feels alive.
+          We believe in slow travel, where every moment whispers a new secret.
+          Our experts handpick stays and routes to match your rhythm and curiosity.
+          You will find hidden gems beyond the tourist maps — places that feel almost magical.
+          Safety, comfort, and authenticity are at the core of every adventure we design.
+          We travel with purpose, connecting souls and cultures under the same moon.
+          Choose us — and let your next journey become a story worth telling.
+          </p>
+          <a href="about-contact.html" class="btn btn-dark btn-sm">Contact us</a>
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0">
+          <img src="images/map.png" alt="Why Choose Us" class="img-fluid rounded-3 shadow">
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Spooky Deals -->
+<section class="py-5 spooky-section">
+  <div class="container">
+    <h2 class="fw-bold mb-5 text-center">Spooky Deals</h2>
+
+    <div class="row g-4 justify-content-center">
+      <!-- Card 1 -->
+      <div class="col-sm-12 col-lg-6">
+        <div class="spooky-card position-relative overflow-hidden rounded shadow-sm">
+          <img
+            src="images/michoacan.png"
+            class="img-fluid w-100 h-100"
+            alt="Transylvania"
+          >
+          <div class="spooky-overlay d-flex flex-column justify-content-end p-4">
+            <h4 class="text-white fw-bold mb-1">Michoacan, Mexico</h4>
+            <p class="text-white-50 mb-2">Where legends of the night come alive.</p>
+            <p class="text-white-50 mb-1 small">Flights Included</p>
+                <p class="text-white-50 mb-1 small">Breakfast Included</p>
+                <p class="fw-semibold text-white mb-3">From <span class="text-success">€1445</span></p>
+            <a href="#" class="btn btn-outline-light btn-sm w-50 book-btn" data-destination="Michoacan, Mexico">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-sm-12 col-lg-6">
+        <div class="spooky-card position-relative overflow-hidden rounded shadow-sm">
+          <img
+            src="images/pekin.png"
+            class="img-fluid w-100 h-100"
+            alt="Salem"
+          >
+          <div class="spooky-overlay d-flex flex-column justify-content-end p-4">
+            <h4 class="text-white fw-bold mb-1">Pekin, China</h4>
+            <p class="text-white-50 mb-2">Witches, fog, and candlelight.</p>
+            <p class="text-white-50 mb-1 small">Flights Included</p>
+                <p class="text-white-50 mb-1 small">Breakfast Included</p>
+                <p class="fw-semibold text-white mb-3">From <span class="text-success">€1745</span></p>
+            <a href="#" class="btn btn-outline-light btn-sm w-50 book-btn" data-destination="Pekin, China">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-5">What Our Travelers Say</h2>
+
+    <div class="row justify-content-center g-4">
+      <!-- Review 1 -->
+      <div class="col-md-4">
+        <div class="review-card p-4 shadow-sm bg-white rounded-4">
+          <img
+            src="https://randomuser.me/api/portraits/women/44.jpg"
+            alt="Traveler"
+            class="review-img mb-3"
+          >
+          <h5 class="fw-semibold mb-1">Emma Collins</h5>
+          <p class="text-muted mb-2">London, UK</p>
+          <p class="fst-italic">
+            “Spooky Travels made my Halloween trip unforgettable — the places
+            were breathtaking and perfectly organized!”
+          </p>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="col-md-4">
+        <div class="review-card p-4 shadow-sm bg-white rounded-4">
+          <img
+            src="https://randomuser.me/api/portraits/men/65.jpg"
+            alt="Traveler"
+            class="review-img mb-3"
+          >
+          <h5 class="fw-semibold mb-1">Daniel Walker</h5>
+          <p class="text-muted mb-2">Dublin, Ireland</p>
+          <p class="fst-italic">
+            “To Transylvania, every stop was magical. I will definitely
+            travel again with them!”
+          </p>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="col-md-4">
+        <div class="review-card p-4 shadow-sm bg-white rounded-4">
+          <img
+            src="https://randomuser.me/api/portraits/women/68.jpg"
+            alt="Traveler"
+            class="review-img mb-3"
+          >
+          <h5 class="fw-semibold mb-1">Isabella Rossi</h5>
+          <p class="text-muted mb-2">Venice, Italy</p>
+          <p class="fst-italic">
+            “The atmosphere, the hotels, the little spooky details — it all felt
+            like a movie. Highly recommend!”
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="py-4 bg-dark text-white text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Midnight Travels. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ========================= -->
+<!-- LOG IN MODAL -->
+<!-- ========================= -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold text-dark" id="loginModalLabel">Log In</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <form>
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Email address</label>
+            <input type="email" class="form-control form-control-lg" placeholder="Enter your email">
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Password</label>
+            <input type="password" class="form-control form-control-lg" placeholder="Enter your password">
+          </div>
+          <button type="submit" class="btn w-100 btn-login-modal">Log In</button>
+          <p class="text-center mt-3 small">Don’t have an account? 
+            <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">Register</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========================= -->
+<!--  REGISTER MODAL -->
+<!-- ========================= -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold text-dark" id="registerModalLabel">Register</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <form>
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Full Name</label>
+            <input type="text" class="form-control form-control-lg" placeholder="Enter your full name">
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Email address</label>
+            <input type="email" class="form-control form-control-lg" placeholder="Enter your email">
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Password</label>
+            <input type="password" class="form-control form-control-lg" placeholder="Create a password">
+          </div>
+          <button type="submit" class="btn w-100 btn-register-modal">Register</button>
+          <p class="text-center mt-3 small">Already have an account? 
+            <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">Log In</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========================= -->
+<!--  BOOKING MODAL -->
+<!-- ========================= -->
+<div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 shadow-lg">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title" id="bookingModalLabel">Book Your Trip</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="bookingForm">
+          <div class="mb-3">
+            <label for="destination" class="form-label">Destination</label>
+            <input type="text" class="form-control" id="destination" readonly>
+          </div>
+          <div class="mb-3">
+            <label for="guests" class="form-label">Number of Guests</label>
+            <input type="number" class="form-control" id="guests" min="1" value="1">
+          </div>
+          <div class="mb-3">
+            <label for="checkin" class="form-label">Check-in</label>
+            <input type="date" class="form-control" id="checkin">
+          </div>
+          <div class="mb-3">
+            <label for="checkout" class="form-label">Check-out</label>
+            <input type="date" class="form-control" id="checkout">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="you@example.com">
+          </div>
+          <button type="submit" class="btn btn-dark w-100">Confirm Booking</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
