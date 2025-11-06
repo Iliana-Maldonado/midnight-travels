@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Destinations | Midnight Travels</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light px-4 py-3 fixed-top shadow-sm">
+  <a class="navbar-brand fw-bold" href="#">Midnight Travels</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav align-items-lg-center">
+      <li class="nav-item mx-2"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item mx-2"><a class="nav-link" href="destinations.html">Destinations</a></li>
+      <li class="nav-item mx-2"><a class="nav-link" href="about-contact.html">Contact</a></li>
+      <li class="nav-item mx-2"><a class="btn btn-login btn-sm" href="#">Log In</a>
+</li>
+      <li class="nav-item mx-2"><a class="btn btn-register btn-sm" href="#">Register</a></li>
+    </ul>
+  </div>
+</nav>
+
+ <!-- HERO PARALLAX -->
+  <section class="hero-destinations d-flex align-items-center text-center text-white">
+    <div class="container">
+      <h1 class="fw-bold display-4">Explore Our Destinations</h1>
+      <p class="lead text-white-50">From misty moors to moonlit castles — discover your next mysterious escape.</p>
+    </div>
+  </section>
+
+  <!-- DESTINATIONS TABS -->
+  <section class="py-5">
+    <div class="container">
+      <ul class="nav nav-pills justify-content-center mb-5" id="countryTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="america-tab" data-bs-toggle="pill" data-bs-target="#america" type="button" role="tab">America</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="europe-tab" data-bs-toggle="pill" data-bs-target="#europe" type="button" role="tab">Europe</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="asia-tab" data-bs-toggle="pill" data-bs-target="#asia" type="button" role="tab">Asia</button>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+
+        <!-- America -->
+<div class="tab-pane fade show active" id="america" role="tabpanel">
+  <div class="row align-items-center g-4 mb-4">
+    <div class="col-md-6">
+      <img src="images/michoacan.png" class="img-fluid rounded-4 shadow" alt="America">
+    </div>
+    <div class="col-md-6">
+      <h2 class="fw-bold mb-3">America</h2>
+      <p>From haunted mansions to neon deserts, explore the mysterious side of the USA — Salem, New Orleans, and beyond.</p>
+    </div>
+  </div>
+
+  <!-- Subdestinos -->
+  <ul class="nav nav-underline justify-content-center mb-4">
+    <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#america-brazil">Brazil</a></li>
+    <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#america-mexico">Mexico</a></li>
+    <li class="nav-item"><a class="nav-link active" data-bs-toggle="pill" href="#america-usa">USA</a></li>
+  </ul>
+
+  <div class="tab-content text-center">
+
+    <!-- USA -->
+    <div class="tab-pane fade show active" id="america-usa">
+      
+      <!-- Places -->
+      <div class="container my-5">
+        <h4 class="fw-bold mb-4 text-start">Popular places in USA</h4>
+        <div class="row g-4">
+
+          <!-- Salem -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/salem.png" class="card-img-top rounded-top-4" alt="Salem">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★</p>
+                <h6 class="fw-bold mb-2">Salem</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">8.8</span>
+                  <small>Fabulous · 321 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€745</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Salem" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Salem">Reserve</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- New Orleans -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/new-orleans.png" class="card-img-top rounded-top-4" alt="New-Orleans">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">New Orleans</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">9.1</span>
+                  <small>Superb · 215 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€829</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="New Orleans" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="New-Orleans">Reserve</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Portland -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/oregon.png" class="card-img-top rounded-top-4" alt="Portland">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★</p>
+                <h6 class="fw-bold mb-2">Portland</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">8.8</span>
+                  <small>Fabulous · 321 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€945</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Portland" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Portland">Reserve</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div> <!-- USA -->
+
+    <!-- Mexico -->
+    <div class="tab-pane fade" id="america-mexico">
+      <!-- Places -->
+      <div class="container my-5">
+        <h4 class="fw-bold mb-4 text-start">Popular places in Mexico</h4>
+        <div class="row g-4">
+
+          <!-- Mexico City -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/mexico-city.png" class="card-img-top rounded-top-4" alt="Mexico-city">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Mexico City</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">8.8</span>
+                  <small>Fabulous · 321 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€1145</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Mexico City" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Mexico-City">Reserve</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Michoacan -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/michoacan.png" class="card-img-top rounded-top-4" alt="Michoacan">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Michoacan</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">9.1</span>
+                  <small>Superb · 215 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€1329</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Michoacan" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Michoacan">Reserve</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Oaxaca -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/oaxaca.png" class="card-img-top rounded-top-4" alt="Oaxaca">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Oaxaca</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">8.8</span>
+                  <small>Fabulous · 321 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€1545</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Oaxaca" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Oaxaca">Reserve</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Baja California Sur -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/baja-california-sur.png" class="card-img-top rounded-top-4" alt="Baja-California-Sur">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★</p>
+                <h6 class="fw-bold mb-2">Baja California Sur</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">8.8</span>
+                  <small>Fabulous · 120 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€1045</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Baja California Sur" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Baja-California-Sur">Reserve</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div> <!-- Mexico -->
+
+    <!-- Brazil -->
+    <div class="tab-pane fade" id="america-brazil">
+      <!-- Places -->
+      <div class="container my-5">
+        <h4 class="fw-bold mb-4 text-start">Popular places in Brazil</h4>
+        <div class="row g-4">
+
+          <!-- Rio de Janeiro -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/rio.png" class="card-img-top rounded-top-4" alt="Rio-de-Janeiro">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★</p>
+                <h6 class="fw-bold mb-2">Rio de Janeiro</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">8.8</span>
+                  <small>Fabulous · 321 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€978</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Rio de Janeiro" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Rio-de-Janeiro">Reserve</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sao Paulo -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/sao-paulo.png" class="card-img-top rounded-top-4" alt="Sao-Paulo">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★</p>
+                <h6 class="fw-bold mb-2">Sao Paulo</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">8.1</span>
+                  <small>Super · 215 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€829</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Sao Paulo" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Sao-Paulo">Reserve</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div> <!-- Brazil -->
+  </div>
+</div> <!-- America -->
+
+
+        <!-- Europe -->
+        <div class="tab-pane fade" id="europe" role="tabpanel">
+          <div class="row align-items-center g-4 mb-4">
+            <div class="col-md-6">
+              <img src="images/dublin.png" class="img-fluid rounded-4 shadow" alt="Europe">
+            </div>
+            <div class="col-md-6">
+              <h2 class="fw-bold mb-3">Europe</h2>
+              <p>Land of Dracula, castles and misty mountains. Explore ancient fortresses, Gothic towns and legends that never die.</p>
+            </div>
+          </div>
+
+          <!-- Subdestinos -->
+          <ul class="nav nav-underline justify-content-center mb-4">
+            <li class="nav-item"><a class="nav-link active" data-bs-toggle="pill" href="#czech-republic">Czech Republic</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#england">England</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#france">France</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#germany">Germany</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#ireland">Ireland</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#italy">Italy</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#netherlands">Netherlands</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#romania">Romania</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#scotland">Scotland</a></li>
+          </ul>
+
+          <div class="tab-content text-center">
+
+<!-- Czech Republic -->
+<div class="tab-pane fade show active" id="czech-republic">
+
+<!-- Places -->
+<div class="container my-5">
+  <h4 class="fw-bold mb-4 text-start">Popular places in Czech Republic </h4>
+  <div class="row g-4">
+
+    <!-- Prague -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/czeck-republic.png" class="card-img-top rounded-top-4" alt="Prague">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Prague</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">8.1</span>
+                  <small>Amazing · 105 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€389</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Prague" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Prague">Reserve</a>
+              </div>
+            </div>
+          </div>
+
+    <!-- Brno -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/transylvania.png" class="card-img-top rounded-top-4" alt="Brno">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★</p>
+                <h6 class="fw-bold mb-2">Brno</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">8.7</span>
+                  <small>Super · 25 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€455</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Brno" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Brno">Reserve</a>
+              </div>
+            </div>
+          </div>
+  </div>
+</div>
+</div> <!-- Czech Republic -->
+
+<!-- England -->
+<div class="tab-pane fade" id="england">
+
+<!-- places -->
+<div class="container my-5">
+  <h4 class="fw-bold mb-4 text-start">Popular places in England</h4>
+  <div class="row g-4">
+
+    <!-- York -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/york.png" class="card-img-top rounded-top-4" alt="York">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">York</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">9.7</span>
+                  <small>Exceptional · 705 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€695</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="York" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="York">Reserve</a>
+              </div>
+            </div>
+          </div>
+
+    <!-- London -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/london.png" class="card-img-top rounded-top-4" alt="London">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★</p>
+                <h6 class="fw-bold mb-2">London</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">8.5</span>
+                  <small>Super · 1005 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€495</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="London" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="London">Reserve</a>
+              </div>
+            </div>
+          </div>
+
+    <!-- Pluckley -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/belfast.png" class="card-img-top rounded-top-4" alt="Pluckley">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Pluckley</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">9.7</span>
+                  <small>Exceptional · 705 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€995</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm btn-sm book-btn" data-destination="Pluckley" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Pluckley">Reserve</a>
+              </div>
+            </div>
+          </div>
+
+    <!-- Liverpool -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/czeck-republic.png" class="card-img-top rounded-top-4" alt="Liverpool">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★</p>
+                <h6 class="fw-bold mb-2">Liverpool</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">7.7</span>
+                  <small>Amazing · 311 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€395</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Liverpool" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Liverpool">Reserve</a>
+              </div>
+            </div>
+          </div>
+
+  </div>
+</div>
+</div> <!-- England -->
+
+<!-- France -->
+<div class="tab-pane fade" id="france">
+
+<!-- places -->
+<div class="container my-5">
+  <h4 class="fw-bold mb-4 text-start">Popular places in France</h4>
+  <div class="row g-4">
+
+    <!-- Paris -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/paris.png" class="card-img-top rounded-top-4" alt="Paris">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Paris</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">9.5</span>
+                  <small>Exceptional · 1035 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€495</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Paris" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Paris">Reserve</a>
+              </div>
+            </div>
+          </div>
+
+    <!-- Nantes -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/edinburgh.png" class="card-img-top rounded-top-4" alt="Nantes">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Nantes</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">9.5</span>
+                  <small>Exceptional · 1035 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€495</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Nantes" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Nantes">Reserve</a>
+              </div>
+            </div>
+          </div>
+    <!-- Lyon -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/belfast.png" class="card-img-top rounded-top-4" alt="Lyon">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Lyon</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">9.5</span>
+                  <small>Exceptional · 1035 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€495</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Lyon" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Lyon">Reserve</a>
+              </div>
+            </div>
+          </div>
+    
+
+  </div>
+</div>
+</div> <!-- France -->
+
+<!-- Germany -->
+<div class="tab-pane fade" id="germany">
+
+<!-- places -->
+<div class="container my-5">
+  <h4 class="fw-bold mb-4 text-start">Popular places in Germany</h4>
+  <div class="row g-4">
+
+    <!-- Berlin -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/belfast.png" class="card-img-top rounded-top-4" alt="Berlin">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Berlin</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">9.5</span>
+                  <small>Exceptional · 1035 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€495</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Berlin" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Berlin">Reserve</a>
+              </div>
+            </div>
+          </div> 
+
+    <!-- Heidelberg -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/czeck-republic.png" class="card-img-top rounded-top-4" alt="Heidelberg">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Heidelberg</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">9.5</span>
+                  <small>Exceptional · 1035 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€495</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Heidelberg" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Heidelberg">Reserve</a>
+              </div>
+            </div>
+          </div>
+
+    <!-- Nuremberg -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/transylvania.png" class="card-img-top rounded-top-4" alt="Nuremberg">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Nuremberg</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">9.5</span>
+                  <small>Exceptional · 1035 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€495</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Nuremberg" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Nuremberg">Reserve</a>
+              </div>
+            </div>
+          </div>
+
+  <!-- Munich -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/york.png" class="card-img-top rounded-top-4" alt="Munich">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Munich</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">9.5</span>
+                  <small>Exceptional · 1035 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€495</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Munich" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Munich">Reserve</a>
+              </div>
+            </div>
+          </div>        
+    
+
+  </div>
+</div>
+</div> <!-- Germany -->
+
+<!-- Ireland -->
+<div class="tab-pane fade" id="ireland">
+
+<!-- places -->
+<div class="container my-5">
+  <h4 class="fw-bold mb-4 text-start">Popular places in Ireland</h4>
+  <div class="row g-4">
+
+    <!-- Derry -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/derry.png" class="card-img-top rounded-top-4" alt="Derry">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Derry</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">9.5</span>
+                  <small>Exceptional · 1035 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€495</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Derry" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Derry">Reserve</a>
+              </div>
+            </div>
+          </div> 
+
+    <!-- Dublin -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/dublin.png" class="card-img-top rounded-top-4" alt="Dublin">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Dublin</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">9.5</span>
+                  <small>Exceptional · 1035 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€495</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Dublin" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Dublin">Reserve</a>
+              </div>
+            </div>
+          </div>
+
+    <!-- Galway -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/york.png" class="card-img-top rounded-top-4" alt="Galway">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Galway</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">9.5</span>
+                  <small>Exceptional · 1035 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€495</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Galway" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Galway">Reserve</a>
+              </div>
+            </div>
+          </div>
+
+  <!-- Belfast -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/belfast.png" class="card-img-top rounded-top-4" alt="Belfast">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Belfast</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">9.5</span>
+                  <small>Exceptional · 1035 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€495</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Belfast" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Belfast">Reserve</a>
+              </div>
+            </div>
+          </div>        
+    
+
+  </div>
+</div>
+</div> <!-- Ireland -->
+
+<!-- Italy -->
+<div class="tab-pane fade" id="italy">
+
+<!-- places -->
+<div class="container my-5">
+  <h4 class="fw-bold mb-4 text-start">Popular places in Italy</h4>
+  <div class="row g-4">
+
+    <!-- Rome -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/rome.png" class="card-img-top rounded-top-4" alt="Rome">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Rome</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">9.5</span>
+                  <small>Exceptional · 1035 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€495</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Rome" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Rome">Reserve</a>
+              </div>
+            </div>
+          </div>
+
+    <!-- Venice -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/venice.png" class="card-img-top rounded-top-4" alt="Venice">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Venice</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">9.5</span>
+                  <small>Exceptional · 1035 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€495</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Venice" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Venice">Recerve</a>
+              </div>
+            </div>
+          </div>
+
+  <!-- Naples -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/transylvania.png" class="card-img-top rounded-top-4" alt="Naples">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Naples</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">9.5</span>
+                  <small>Exceptional · 1035 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€495</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Naples" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Naples">Reserve</a>
+              </div>
+            </div>
+          </div>        
+    
+
+  </div>
+</div>
+</div> <!-- Italy -->
+
+<!-- Netherlands -->
+<div class="tab-pane fade" id="netherlands">
+
+<!-- places -->
+<div class="container my-5">
+  <h4 class="fw-bold mb-4 text-start">Popular places in Netherlands</h4>
+  <div class="row g-4">
+
+    <!-- Amsterdam -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/derry.png" class="card-img-top rounded-top-4" alt="Amsterdam">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Amsterdam</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">9.5</span>
+                  <small>Exceptional · 1035 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€495</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Amsterdam" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Amsterdam">Reserve</a>
+              </div>
+            </div>
+          </div>
+
+  <!-- Rotterdam -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/edinburgh.png" class="card-img-top rounded-top-4" alt="Rotterdam">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Rotterdam</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">9.5</span>
+                  <small>Exceptional · 1035 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€495</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Rotterdam" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Rotterdam">Reserve</a>
+              </div>
+            </div>
+          </div>        
+    
+
+  </div>
+</div>
+</div> <!-- Netherlands -->
+
+<!-- Romania -->
+<div class="tab-pane fade" id="romania">
+
+<!-- places -->
+<div class="container my-5">
+  <h4 class="fw-bold mb-4 text-start">Popular places in Romania</h4>
+  <div class="row g-4">
+
+    <!-- Bucharest -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/czeck-republic.png" class="card-img-top rounded-top-4" alt="Bucharest">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Bucharest</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">9.5</span>
+                  <small>Exceptional · 1035 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€495</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Bucharest" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Bucharest">Reserve</a>
+              </div>
+            </div>
+          </div>
+
+    <!-- Brasov -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/transylvania.png" class="card-img-top rounded-top-4" alt="Brasov">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Brasov</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">9.5</span>
+                  <small>Exceptional · 1035 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€495</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Brasov" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Brasov">Recerve</a>
+              </div>
+            </div>
+          </div>
+
+  <!-- Iasi -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/salem.png" class="card-img-top rounded-top-4" alt="Iasi">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Iasi</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">9.5</span>
+                  <small>Exceptional · 1035 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€495</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Iasi" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Iasi">Reserve</a>
+              </div>
+            </div>
+          </div>        
+    
+
+  </div>
+</div>
+</div> <!-- Romania -->
+
+<!-- Scotland -->
+<div class="tab-pane fade" id="scotland">
+
+<!-- places -->
+<div class="container my-5">
+  <h4 class="fw-bold mb-4 text-start">Popular places in Scotland</h4>
+  <div class="row g-4">
+
+    <!-- Edinburgh -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/edinburgh.png" class="card-img-top rounded-top-4" alt="Edinburgh">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Edinburgh</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">9.5</span>
+                  <small>Exceptional · 1035 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€495</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Edinburgh" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Edinburgh">Reserve</a>
+              </div>
+            </div>
+          </div>
+
+    <!-- Glasgow -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/glasgow.png" class="card-img-top rounded-top-4" alt="Glasgow">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Glasgow</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">9.5</span>
+                  <small>Exceptional · 1035 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€495</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Glasgow" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Glasgow">Recerve</a>
+              </div>
+            </div>
+          </div>
+
+  <!-- Isle of Skye -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/skye.png" class="card-img-top rounded-top-4" alt="Isle-of-Skye">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Isle of Skye</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">9.5</span>
+                  <small>Exceptional · 1035 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€495</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Isle of Skye" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Isle of Skye">Reserve</a>
+              </div>
+            </div>
+          </div>        
+    
+  </div>
+</div>
+</div> <!-- Scotland -->
+</div>
+</div> <!-- Europe -->
+
+<!-- Asia -->
+<div class="tab-pane fade show" id="asia" role="tabpanel">
+  <div class="row align-items-center g-4 mb-4">
+    <div class="col-md-6">
+      <img src="images/tokyo.png" class="img-fluid rounded-4 shadow" alt="Asia">
+    </div>
+    <div class="col-md-6">
+      <h2 class="fw-bold mb-3">Asia</h2>
+      <p>From haunted mansions to neon deserts, explore the mysterious side of the USA — Salem, New Orleans, and beyond.</p>
+    </div>
+  </div>
+
+  <!-- Subdestinos -->
+  <ul class="nav nav-underline justify-content-center mb-4">
+    <li class="nav-item"><a class="nav-link active" data-bs-toggle="pill" href="#asia-china">China</a></li>
+    <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#asia-india">India</a></li>
+    <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#asia-japan">Japan</a></li>
+  </ul>
+
+  <div class="tab-content text-center">
+
+    <!-- China -->
+    <div class="tab-pane fade show active" id="asia-china">
+      
+      <!-- Places -->
+      <div class="container my-5">
+        <h4 class="fw-bold mb-4 text-start">Popular places in China</h4>
+        <div class="row g-4">
+
+          <!-- Pekin -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/pekin.png" class="card-img-top rounded-top-4" alt="Pekin">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★</p>
+                <h6 class="fw-bold mb-2">Pekin</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">8.8</span>
+                  <small>Fabulous · 321 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€745</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Pekin" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Pekin">Reserve</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kangbashi -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/china.png" class="card-img-top rounded-top-4" alt="Kangbashi">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Kangbashi</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">9.1</span>
+                  <small>Superb · 215 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€829</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Kangbashi" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Kangbashi">Reserve</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Houtouwan -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/kioto.png" class="card-img-top rounded-top-4" alt="Houtouwan">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★</p>
+                <h6 class="fw-bold mb-2">Houtouwan</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">8.8</span>
+                  <small>Fabulous · 321 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€945</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Houtouwan" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Houtouwan">Reserve</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div> <!-- China -->
+
+    <!-- India -->
+    <div class="tab-pane fade" id="asia-india">
+      <!-- Places -->
+      <div class="container my-5">
+        <h4 class="fw-bold mb-4 text-start">Popular places in India</h4>
+        <div class="row g-4">
+
+          <!-- Jaipur -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/india.png" class="card-img-top rounded-top-4" alt="Jaipur">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Jaipur</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">8.8</span>
+                  <small>Fabulous · 321 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€1145</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Jaipur" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Jaipur">Reserve</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bombay -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/bombay.png" class="card-img-top rounded-top-4" alt="Bombay">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">Bombay</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">9.1</span>
+                  <small>Superb · 215 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€1329</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Bombay" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Bombay">Reserve</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- New Delhi -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/new-delhi.png" class="card-img-top rounded-top-4" alt="New Delhi">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★★</p>
+                <h6 class="fw-bold mb-2">New Delhi</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">8.8</span>
+                  <small>Fabulous · 321 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€1545</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="New Delhi" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="New Delhi">Reserve</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- India -->
+
+    <!-- Japan -->
+    <div class="tab-pane fade" id="asia-japan">
+      <!-- Places -->
+      <div class="container my-5">
+        <h4 class="fw-bold mb-4 text-start">Popular places in Japan</h4>
+        <div class="row g-4">
+
+          <!-- Tokyo -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/tokyo.png" class="card-img-top rounded-top-4" alt="Tokyo">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★★</p>
+                <h6 class="fw-bold mb-2">Tokyo</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">8.8</span>
+                  <small>Fabulous · 321 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€978</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Tokyo" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Tokyo">Reserve</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kioto -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="images/kioto.png" class="card-img-top rounded-top-4" alt="Kioto">
+              <div class="card-body">
+                <p class="text-muted mb-1 small">★★★</p>
+                <h6 class="fw-bold mb-2">Kioto</h6>
+                <p class="text-muted mb-1 small">Flights Included</p>
+                <p class="text-muted mb-1 small">Breakfast Included</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-primary me-2">8.1</span>
+                  <small>Super · 215 reviews</small>
+                </div>
+                <p class="fw-semibold text-dark mb-3">From <span class="text-success">€829</span></p>
+                <a href="#" class="btn btn-dark w-100 btn-sm book-btn" data-destination="Kioto" data-bs-toggle="modal" data-bs-target="#reserveModal" data-hotel="Kioto">Reserve</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div> <!-- Japan -->
+  </div>
+</div> <!-- Asia -->
+
+       
+      </div> <!-- tab content -->
+    </div> <!-- destinations tab -->
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 bg-dark text-white text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Midnight Travels. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+<!-- ========================= -->
+<!--  BOOKING MODAL -->
+<!-- ========================= -->
+<div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 shadow-lg">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title" id="bookingModalLabel">Book Your Trip</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="bookingForm">
+          <div class="mb-3">
+            <label for="destination" class="form-label">Destination</label>
+            <input type="text" class="form-control" id="destination" readonly>
+          </div>
+          <div class="mb-3">
+            <label for="guests" class="form-label">Number of Guests</label>
+            <input type="number" class="form-control" id="guests" min="1" value="1">
+          </div>
+          <div class="mb-3">
+            <label for="checkin" class="form-label">Check-in</label>
+            <input type="date" class="form-control" id="checkin">
+          </div>
+          <div class="mb-3">
+            <label for="checkout" class="form-label">Check-out</label>
+            <input type="date" class="form-control" id="checkout">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="you@example.com">
+          </div>
+          <button type="submit" class="btn btn-dark w-100">Confirm Booking</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
