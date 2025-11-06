@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About us & contact | Midnight Travels</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light px-4 py-3 fixed-top shadow-sm">
+  <a class="navbar-brand fw-bold" href="#">Midnight Travels</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav align-items-lg-center">
+      <li class="nav-item mx-2"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item mx-2"><a class="nav-link" href="destinations.html">Destinations</a></li>
+      <li class="nav-item mx-2"><a class="nav-link" href="about-contact.html">Contact</a></li>
+      <li class="nav-item mx-2"><a class="btn btn-login btn-sm" href="#">Log In</a>
+</li>
+      <li class="nav-item mx-2"><a class="btn btn-register btn-sm" href="#">Register</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <!-- OUR STORY -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-md-6">
+          <img src="images/map.png" 
+               alt="Our Story" 
+               class="img-fluid rounded-4 shadow-sm">
+        </div>
+        <div class="col-md-6">
+          <h2 class="fw-bold mb-3">Our Story</h2>
+          <p class="text-muted">
+          At Midnight Travels, every journey begins with a spark of wonder.
+          We dont just plan trips — we craft stories that stay with you forever.
+          Our team of passionate travelers curates each experience with heart and precision.
+          From misty castles to vibrant city lights, every destination feels alive.
+          We believe in slow travel, where every moment whispers a new secret.
+          Our experts handpick stays and routes to match your rhythm and curiosity.
+          You will find hidden gems beyond the tourist maps — places that feel almost magical.
+          Safety, comfort, and authenticity are at the core of every adventure we design.
+          We travel with purpose, connecting souls and cultures under the same moon.
+          Choose us — and let your next journey become a story worth telling.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR VALUES -->
+  <section class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-5">Our Values</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="p-4 shadow-sm bg-white rounded-4">
+            <i class="bi bi-heart-fill fs-1 text-primary mb-3"></i>
+            <h5 class="fw-semibold mb-2">Passion</h5>
+            <p>We live to create experiences that awaken curiosity and wonder.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 shadow-sm bg-white rounded-4">
+            <i class="bi bi-geo-alt-fill fs-1 text-primary mb-3"></i>
+            <h5 class="fw-semibold mb-2">Adventure</h5>
+            <p>Every journey is a story — and every traveler, a seeker of magic.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 shadow-sm bg-white rounded-4">
+            <i class="bi bi-moon-stars-fill fs-1 text-primary mb-3"></i>
+            <h5 class="fw-semibold mb-2">Mystery</h5>
+            <p>We celebrate the unknown — from ancient myths to moonlit nights.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT AN AGENT -->
+<section class="contact-agent py-5 bg-white">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <!-- Text -->
+      <div class="col-lg-6">
+        <h2 class="fw-bold mb-3">Contact an agent</h2>
+        <p class="text-muted mb-3">We want to hear from you</p>
+        <p class="mb-4">
+          Body text for your whole article or post. We'll put in some lorem ipsum to show how a filled-out page might look:
+        </p>
+        <p>
+            Born from a passion for legends, moonlit castles, and haunted paths, 
+            Spooky Travels was founded to bring travelers closer to the thrill of history and folklore.
+          </p>
+          <p>
+            Our team of storytellers and wanderers curates unique experiences across Europe’s most enchanting destinations — 
+            where mystery meets beauty.
+          </p>
+
+        <h5 class="fw-semibold mt-4 mb-3">Send your details</h5>
+        <form id="contactFormModern" class="row g-3">
+          <div class="col-md-6">
+            <label for="fulltName" class="form-label small text-muted">Full name</label>
+            <input type="text" class="form-control" id="fullName" placeholder="Jane Smitherton" required>
+          </div>
+          <div class="col-md-6">
+            <label for="phoneNumber" class="form-label small text-muted">Phone number</label>
+            <input type="tel" class="form-control" id="phoneNumber" placeholder="+44 123 456 7890" required>
+          </div>
+          <div class="col-12">
+            <label for="email" class="form-label small text-muted">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="email@janesfakedomain.net" required>
+          </div>
+          <div class="col-12">
+            <label for="message" class="form-label small text-muted">Your message</label>
+            <textarea id="message" class="form-control" rows="4" placeholder="Enter your question or message"></textarea>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-dark w-100 py-2">Submit</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Imagen -->
+      <div class="col-lg-6 text-center">
+        <img src="images/team.png"
+             alt="Agent portrait"
+             class="img-fluid rounded-4 shadow agent-img-modern">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="py-4 bg-dark text-white text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Midnight Travels. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
